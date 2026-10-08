@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risma Anita Loviana - Portofolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cuteBg: '#fff5f7',
+                        cuteCard: '#ffffff',
+                        cuteCardHover: '#ffe4e6',
+                        cutePink: '#fb7185',
+                        cutePurple: '#c084fc',
+                        cuteSoftText: '#6b7280',
+                    },
+                    fontFamily: {
+                        sans: ['Quicksand', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Quicksand -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #fff5f7;
+            color: #4b5563;
+            background-image: 
+                radial-gradient(#fbcfe8 1px, transparent 1px), 
+                radial-gradient(#fbcfe8 1px, #fff5f7 1px);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+        }
+        .cute-card {
+            background: #ffffff;
+            border: 2px solid #fbcfe8;
+            box-shadow: 0 10px 25px -5px rgba(251, 113, 133, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+        .cute-card:hover {
+            transform: translateY(-5px);
+            border-color: #fb7185;
+            box-shadow: 0 15px 30px -5px rgba(251, 113, 133, 0.2);
+        }
+        .cute-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border: 2px solid #fbcfe8;
+        }
+    </style>
+</head>
+<body class="selection:bg-pink-300 selection:text-pink-900">
+
+    <!-- Navbar -->
+    <nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-4xl cute-nav rounded-full z-50 py-3 px-6 flex justify-between items-center shadow-md">
+        <a href="#" class="font-bold text-lg flex items-center gap-2">
+            <span class="text-pink-500">🌸</span> <span class="bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">Risma Anita Loviana</span>
+        </a>
+        <div class="hidden md:flex gap-6 font-semibold text-sm text-gray-600">
+            <a href="#about" class="hover:text-pink-500 transition">Tentang</a>
+            <a href="#skills" class="hover:text-pink-500 transition">Keahlian</a>
+            <a href="#certificates" class="hover:text-pink-500 transition">Sertifikat</a>
+            <a href="#company" class="hover:text-pink-500 transition">Tempat PKL</a>
+            <a href="#contact" class="hover:text-pink-500 transition">Kontak</a>
+        </div>
+        <button id="menu-btn" class="md:hidden text-xl text-pink-500 focus:outline-none">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-[#fff5f7]/95 z-40 flex flex-col items-center justify-center gap-6 text-xl font-bold hidden md:hidden">
+        <button id="close-btn" class="absolute top-6 right-6 text-3xl text-gray-400 hover:text-pink-500">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <a href="#about" class="mobile-link hover:text-pink-500">Tentang</a>
+        <a href="#skills" class="mobile-link hover:text-pink-500">Keahlian</a>
+        <a href="#certificates" class="mobile-link hover:text-pink-500">Sertifikat</a>
+        <a href="#company" class="mobile-link hover:text-pink-500">Tempat PKL</a>
+        <a href="#contact" class="mobile-link hover:text-pink-500">Kontak</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center pt-32 pb-16 px-6 md:px-12">
+        <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 text-center md:text-left">
+                <span class="inline-block bg-pink-100 text-pink-600 border border-pink-200 font-bold px-4 py-1.5 rounded-full text-xs">
+                    💖 HALO DUNIA • SISWA MAGANG / PKL
+                </span>
+                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-gray-800">
+                    Hai, Aku <span class="bg-gradient-to-r from-pink-500 via-purple-500 to-pink-400 bg-clip-text text-transparent">Risma Anita Loviana</span>
+                </h1>
+                <p class="text-gray-600 text-base md:text-lg leading-relaxed">
+                    Peserta Praktik Kerja Lapangan yang senang merangkai kode antarmuka web yang manis, fungsional, dan ramah pengguna. ✨
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                    <a href="#skills" class="bg-pink-500 text-white font-bold px-6 py-3 rounded-2xl hover:bg-pink-600 transition shadow-lg shadow-pink-200">
+                        Lihat Keahlianku 🎀
+                    </a>
+                  <a href="#certificates" class="border-2 border-pink-400 text-pink-600 font-bold px-6 py-3 rounded-full shadow-sm hover:bg-pink-50 transition duration-300">
+                 Sertifikat Kompetensi 📜
+                  </a>
+        </div>
+    </div>
+            
+            <!-- Foto Profil -->
+            <div class="flex justify-center">
+                <div class="relative w-72 h-72 md:w-96 md:h-96 rounded-3xl overflow-hidden cute-card p-2 bg-white">
+                    <!-- Ganti dengan nama file foto kamu -->
+                    <img src="cimaaa.jpeg" alt="Foto Profil" class="w-full h-full object-cover rounded-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- About Section -->
+    <section id="about" class="py-20 px-6 md:px-12">
+        <div class="max-w-5xl mx-auto space-y-10">
+            <div class="text-center space-y-3">
+                <h2 class="text-3xl font-extrabold text-gray-800">Persiapan <span class="text-pink-500">PKL-ku</span> 🌸</h2>
+                <p class="text-gray-500 text-sm">Menimba ilmu industri digital dengan penuh semangat dan kreativitas.</p>
+            </div>
+            <div class="cute-card p-8 rounded-3xl text-gray-600 text-base md:text-lg leading-relaxed text-center">
+                Semangat menyambut PKL! Aku adalah seorang siswi dari SMKN 8 JEMBER yang antusias mendalami dunia web development.
+                Menghadapi masa Praktik Kerja Lapangan (PKL), Berbekal ilmu pemrograman yang aku tekuni sejak kelas 10—mulai dari merancang web hingga 
+                mengelola database—aku siap belajar, dan memberikan kontribusi terbaik di tempat magang nanti! 
+                Dari membangun antarmuka web yang interaktif hingga pemahaman logika pemrograman, portofolio ini adalah bukti kesiapanku untuk belajar langsung dari para profesional di industri.
+                Aku sudah tidak sabar untuk mencari pengalaman seru dan menantang di dunia kerja nyata.
+                </div> 
+            </div>
+        </div>
+    </section>
+<!-- Skills Section -->
+    <section id="skills" class="py-20 px-6 md:px-12">
+        <div class="max-w-6xl mx-auto space-y-12">
+            <div class="text-center space-y-3">
+                <h2 class="text-3xl font-extrabold text-gray-800">Keahlian & <span class="text-pink-500">Kecakapan Teknis</span> 🌷</h2>
+                <p class="text-gray-500 text-sm">Berbagai bahasa pemrograman dan perangkat lunak yang telah kupelajari.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Tailwind CSS (80%) -->
+                <div class="cute-card p-6 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs bg-pink-100 text-pink-600 px-2.5 py-1 rounded-md font-bold">DESAIN STYLING</span>
+                            <span class="text-xs text-pink-500 font-bold">80%</span>
+                        </div>
+                        <h3 class="font-extrabold text-lg text-gray-800">Tailwind CSS</h3>
+                        <p class="text-gray-500 text-xs leading-relaxed">Menyusun tata letak responsif instan, kustomisasi palet warna, dan pengaturan file produksi yang rapi.</p>
+                    </div>
+                    <div class="w-full bg-pink-100 rounded-full h-2.5 overflow-hidden">
+                        <div class="bg-pink-500 h-2.5 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <!-- Bootstrap (85%) -->
+                <div class="cute-card p-6 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs bg-purple-100 text-purple-600 px-2.5 py-1 rounded-md font-bold">FRAMEWORK UI</span>
+                            <span class="text-xs text-purple-500 font-bold">85%</span>
+                        </div>
+                        <h3 class="font-extrabold text-lg text-gray-800">Bootstrap</h3>
+                        <p class="text-gray-500 text-xs leading-relaxed">Memanfaatkan sistem grid 12 kolom, koleksi komponen siap pakai, serta pembuatan purwarupa halaman admin kilat.</p>
+                    </div>
+                    <div class="w-full bg-purple-100 rounded-full h-2.5 overflow-hidden">
+                        <div class="bg-purple-500 h-2.5 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <!-- Java (85%) -->
+                <div class="cute-card p-6 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs bg-pink-100 text-pink-600 px-2.5 py-1 rounded-md font-bold">SISTEM KELAS</span>
+                            <span class="text-xs text-pink-500 font-bold">85%</span>
+                        </div>
+                        <h3 class="font-extrabold text-lg text-gray-800">Java</h3>
+                        <p class="text-gray-500 text-xs leading-relaxed">Menerapkan konsep pemrograman berorientasi objek (OOP), layanan mikro berbasis Spring Boot, dan optimalisasi memori.</p>
+                    </div>
+                    <div class="w-full bg-pink-100 rounded-full h-2.5 overflow-hidden">
+                        <div class="bg-pink-500 h-2.5 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <!-- PHP (80%) -->
+                <div class="cute-card p-6 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs bg-purple-100 text-purple-600 px-2.5 py-1 rounded-md font-bold">SISI SERVER</span>
+                            <span class="text-xs text-purple-500 font-bold">80%</span>
+                        </div>
+                        <h3 class="font-extrabold text-lg text-gray-800">PHP</h3>
+                        <p class="text-gray-500 text-xs leading-relaxed">Mengelola pemrosesan data di server, koneksi database aman lewat PDO, serta pemeriksaan kode aplikasi web.</p>
+                    </div>
+                    <div class="w-full bg-purple-100 rounded-full h-2.5 overflow-hidden">
+                        <div class="bg-purple-500 h-2.5 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <!-- HTML5 (95%) -->
+                <div class="cute-card p-6 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs bg-pink-100 text-pink-600 px-2.5 py-1 rounded-md font-bold">STRUKTUR DOKUMEN</span>
+                            <span class="text-xs text-pink-500 font-bold">95%</span>
+                        </div>
+                        <h3 class="font-extrabold text-lg text-gray-800">HTML5</h3>
+                        <p class="text-gray-500 text-xs leading-relaxed">Menulis kerangka halaman bermakna semantik tinggi, aturan aksesibilitas inklusif, serta ramah bagi mesin pencari.</p>
+                    </div>
+                    <div class="w-full bg-pink-100 rounded-full h-2.5 overflow-hidden">
+                        <div class="bg-pink-500 h-2.5 rounded-full" style="width: 95%"></div>
+                    </div>
+                </div>
+
+                <!-- CSS (95%) -->
+                <div class="cute-card p-6 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs bg-purple-100 text-purple-600 px-2.5 py-1 rounded-md font-bold">ESTETIKA VISUAL</span>
+                            <span class="text-xs text-purple-500 font-bold">95%</span>
+                        </div>
+                        <h3 class="font-extrabold text-lg text-gray-800">CSS</h3>
+                        <p class="text-gray-500 text-xs leading-relaxed">Menggunakan Flexbox dan Grid mutakhir, ukuran huruf dinamis, efek kaca tembus pandang, hingga animasi halus.</p>
+                    </div>
+                    <div class="w-full bg-purple-100 rounded-full h-2.5 overflow-hidden">
+                        <div class="bg-purple-500 h-2.5 rounded-full" style="width: 95%"></div>
+                    </div>
+                </div>
+
+                <!-- UI/UX Design (90%) -->
+                <div class="cute-card p-6 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs bg-pink-100 text-pink-600 px-2.5 py-1 rounded-md font-bold">PROTOTIPE & RISET</span>
+                            <span class="text-xs text-pink-500 font-bold">90%</span>
+                        </div>
+                        <h3 class="font-extrabold text-lg text-gray-800">UI/UX Design</h3>
+                        <p class="text-gray-500 text-xs leading-relaxed">Merancang tata letak antarmuka pengguna, riset alur pengguna (user flow), wireframing, dan desain interaktif.</p>
+                    </div>
+                    <div class="w-full bg-pink-100 rounded-full h-2.5 overflow-hidden">
+                        <div class="bg-pink-500 h-2.5 rounded-full" style="width: 90%"></div>
+                    </div>
+                </div>
+
+                <!-- JavaScript (80%) -->
+                <div class="cute-card p-6 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs bg-purple-100 text-purple-600 px-2.5 py-1 rounded-md font-bold">INTERAKTIVITAS</span>
+                            <span class="text-xs text-purple-500 font-bold">80%</span>
+                        </div>
+                        <h3 class="font-extrabold text-lg text-gray-800">JavaScript</h3>
+                        <p class="text-gray-500 text-xs leading-relaxed">Mengembangkan logika interaktif sisi klien, manipulasi DOM dinamis, penanganan iven, dan asinkronus API.</p>
+                    </div>
+                    <div class="w-full bg-purple-100 rounded-full h-2.5 overflow-hidden">
+                        <div class="bg-purple-500 h-2.5 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <!-- MySQL (75%) -->
+                <div class="cute-card p-6 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs bg-pink-100 text-pink-600 px-2.5 py-1 rounded-md font-bold">DATABASE RELASIONAL</span>
+                            <span class="text-xs text-pink-500 font-bold">75%</span>
+                        </div>
+                        <h3 class="font-extrabold text-lg text-gray-800">MySQL</h3>
+                        <p class="text-gray-500 text-xs leading-relaxed">Merancang basis data relasional, pengelolaan tabel, penulisan kueri SQL kompleks, serta integrasi data aplikasi.</p>
+                    </div>
+                    <div class="w-full bg-pink-100 rounded-full h-2.5 overflow-hidden">
+                        <div class="bg-pink-500 h-2.5 rounded-full" style="width: 75%"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<!-- Projects Section (Landing Page Mie Ayam) -->
+    <section id="projects" class="py-20 px-6 md:px-12 bg-pink-50/50">
+        <div class="max-w-6xl mx-auto space-y-12">
+            <div class="text-center space-y-3">
+                <h2 class="text-3xl font-extrabold text-gray-800">Proyek & <span class="text-pink-500">Hasil Karya</span> 🍜</h2>
+                <p class="text-gray-500 text-sm">Beberapa landing page dan aplikasi web yang telah kubangun.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 gap-8 max-w-2xl mx-auto">
+                <div class="cute-card rounded-3xl overflow-hidden p-6 flex flex-col justify-between space-y-6 bg-white">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs bg-pink-100 text-pink-600 px-3 py-1 rounded-full font-bold">LANDING PAGE</span>
+                            <span class="text-xs text-gray-400">HTML, CSS, Tailwind</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Mie Ayam Pak Agus</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Website landing page kuliner interaktif yang menyajikan menu andalan seperti Mie Ayam Ceker, Mie Ayam Original, dan Mie Ayam Komplit dengan desain modern, responsif, serta menggugah selera.
+                        </p>
+                    </div>
+                    <!-- Gambar Hasil Landing Page -->
+                    <div class="w-full h-64 bg-pink-50 rounded-2xl border-2 border-pink-200 overflow-hidden flex items-center justify-center p-2">
+                        <img src="mie ayam.png" alt="Landing Page Mie Ayam Pak Agus" class="w-full h-full object-cover rounded-xl hover:scale-105 transition duration-300">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Certificates Section -->
+    <section id="certificates" class="py-20 px-6 md:px-12">
+        <div class="max-w-6xl mx-auto space-y-12">
+            <div class="text-center space-y-3">
+                <h2 class="text-3xl font-extrabold text-gray-800">Sertifikat & <span class="text-pink-500">Keahlian</span> 📜</h2>
+                <p class="text-gray-500 text-sm">Bekal sertifikat kompetensi yang telah diraih sebagai persiapan menyambut PKL.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Sertifikat 1 (Java Fundamental) -->
+                <div class="cute-card rounded-3xl overflow-hidden p-6 flex flex-col justify-between space-y-6">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs bg-pink-100 text-pink-600 px-3 py-1 rounded-full font-bold">GETSKILL</span>
+                            <span class="text-xs text-gray-400">No. 12202512200191</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Java Fundamental Programming</h3>
+                        <p class="text-gray-600 text-sm">Sertifikat keahlian pemrograman dasar Java yang diraih sejak kelas 10.</p>
+                    </div>
+                    <!-- Menggunakan object-contain agar seluruh isi sertifikat terlihat pas tanpa terpotong -->
+                    <div class="w-full h-48 bg-pink-50 rounded-2xl border-2 border-pink-200 overflow-hidden flex items-center justify-center p-2">
+                        <img src="sertifikat java.png" alt="Sertifikat Java Fundamental" class="w-full h-full object-contain hover:scale-105 transition duration-300">
+                    </div>
+                </div>
+
+                <!-- Sertifikat 2 (Front End Web Bootstrap) -->
+                <div class="cute-card rounded-3xl overflow-hidden p-6 flex flex-col justify-between space-y-6">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs bg-purple-100 text-purple-600 px-3 py-1 rounded-full font-bold">GETSKILL</span>
+                            <span class="text-xs text-gray-400">No. 12202605160961</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Pemrograman Front End Web dengan Bootstrap</h3>
+                        <p class="text-gray-600 text-sm">Dokumen penguasaan materi pembuatan web modern (Berlaku hingga 16 Mei 2029).</p>
+                    </div>
+                    <!-- Menggunakan object-contain agar seluruh isi sertifikat terlihat pas tanpa terpotong -->
+                    <div class="w-full h-48 bg-purple-50 rounded-2xl border-2 border-purple-200 overflow-hidden flex items-center justify-center p-2">
+                        <img src="sertifikat web.png" alt="Sertifikat Front End Web" class="w-full h-full object-contain hover:scale-105 transition duration-300">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Section -->
+    <section id="company" class="py-16 px-6 md:px-12">
+        <div class="max-w-4xl mx-auto cute-card rounded-3xl p-8 md:p-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            <div class="flex justify-center">
+                <div class="w-32 h-32 bg-pink-50 border-2 border-pink-200 rounded-2xl flex items-center justify-center text-5xl">
+                    🏢
+                </div>
+            </div>
+            <div class="md:col-span-2 space-y-3 text-center md:text-left">
+                <span class="bg-pink-100 text-pink-600 font-bold px-3 py-1 rounded-lg text-xs">Lokasi Penempatan</span>
+                <h3 class="text-2xl font-extrabold text-gray-800">[Nama Instansi / Perusahaan PKL]</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Menjalankan kegiatan magang di bagian <strong class="text-pink-500">Divisi Teknologi & Pengembangan Perangkat Lunak</strong> selama <strong class="text-pink-500">[Durasi PKL]</strong>. Terlibat langsung dalam penyelesaian tugas-tugas tim IT.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 md:px-12">
+        <div class="max-w-3xl mx-auto cute-card rounded-3xl p-8 md:p-12 text-center space-y-8 bg-white">
+            <div class="space-y-2">
+                <h2 class="text-3xl font-extrabold text-gray-800">Kirim Pesan Yuk! 💌</h2>
+                <p class="text-gray-500 text-sm">Ada hal yang ingin ditanyakan atau didiskusikan? Sampaikan di sini, ya!</p>
+            </div>
+            <form id="contact-form" class="space-y-4 text-left">
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-1">Nama Lengkap</label>
+                    <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl bg-pink-50/50 border-2 border-pink-200 text-gray-800 focus:outline-none focus:border-pink-400 transition" placeholder="Tulis namamu...">
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-1">Alamat Email</label>
+                    <input type="email" id="email" required class="w-full px-4 py-3 rounded-xl bg-pink-50/50 border-2 border-pink-200 text-gray-800 focus:outline-none focus:border-pink-400 transition" placeholder="nama@email.com">
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-1">Isi Pesan</label>
+                    <textarea id="message" rows="4" required class="w-full px-4 py-3 rounded-xl bg-pink-50/50 border-2 border-pink-200 text-gray-800 focus:outline-none focus:border-pink-400 transition" placeholder="Ketik pesan yang ingin dikirimkan..."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-pink-500 text-white font-extrabold py-3.5 rounded-xl hover:bg-pink-600 transition shadow-lg shadow-pink-200">
+                    Kirim Sekarang ✨
+                </button>
+            </form>
+            <div id="success-alert" class="hidden bg-pink-100 border-2 border-pink-300 text-pink-700 p-4 rounded-xl font-semibold">
+                Pesanmu berhasil terkirim! Terima kasih ya sudah mampir 🌸
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#fff5f7] py-8 px-6 text-center border-t-2 border-pink-200 text-gray-500 text-sm space-y-3">
+        <div class="flex justify-center gap-6 text-xl text-pink-500">
+            <a href="#" class="hover:text-pink-600 transition"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="hover:text-pink-600 transition"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" class="hover:text-pink-600 transition"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <p>Portofolio PKL Cute Edition © 2026</p>
+    </footer>
+
+    <!-- JavaScript Interaktif -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        const contactForm = document.getElementById('contact-form');
+        const successAlert = document.getElementById('success-alert');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            successAlert.classList.remove('hidden');
+            contactForm.reset();
+
+            setTimeout(() => {
+                successAlert.classList.add('hidden');
+            }, 4000);
+        });
+    </script>
+</body>
+</html>
